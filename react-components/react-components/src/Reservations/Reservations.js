@@ -1,4 +1,5 @@
 import React from 'react';
+import Reservation from './Reservation.js'
 
 
 export default class Reservations extends React.Component {
@@ -14,37 +15,23 @@ export default class Reservations extends React.Component {
         name: "test site"} 
     ]
 
-    // renderReservations() {
-    //     testData.forEach(reservation => {
-    //         <div>
-    //         {reservation.site}
-    //         {reservation.date}
-    //         {reservation.name}
-
-    //         </div>
-    //     })
-    // }
-
-    render(){
-        return(
-        this.testData.forEach(reservation => {
-            return
-                
-                reservation.site,
-                reservation.date,
-                reservation.name
+    generateReservations = () => {
+        // map over your movieData array and return an array of the correct JSX
+        return this.testData.map((reservation, index) => <Reservation
+          key = {index}
+          site = {reservation.site}
+          name = {reservation.name}
+          date = {reservation.date}
+          />)
     
-               
-           
-            }
-        ))
-    }
-        
-    
+        };
+    render() {
+        return (
+            <div id="reservations">
+            {this.generateReservations()}
+            </div>
+        )
+        }
 
-    // defaultProps = {
-    //     site: "test",
-    //     date: "27/05/2020",
-    //     name: "test site"
-    // }
+   
 }
