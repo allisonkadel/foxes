@@ -5,7 +5,7 @@
 1. Fork this repository
 2. Clone it locally
 3. Set your remote upstream: 
-`git remote add upstream git@github.com:allisonkadel/hedgehogs.git`
+`git remote add upstream git@github.com:allisonkadel/foxes.git`
 
 ## All Contributions:
 
