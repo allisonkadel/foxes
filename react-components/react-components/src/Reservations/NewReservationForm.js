@@ -27,7 +27,6 @@ export default class NewReservationForm extends React.Component {
     }
 
     handleChange = (event) => {
-        console.log(event.target.value)
         // debugger
         this.setState({
             [event.target.name]: event.target.value
