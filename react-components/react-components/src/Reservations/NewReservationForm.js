@@ -21,7 +21,7 @@ export default class NewReservationForm extends React.Component {
                 <label>Name</label>
                 <input name="name" type="text" value={this.state.name} />
 
-                <input name="Submit" type="submit" value="Submit" onClick={this.handleClick()} />
+                <input name="Submit" type="submit" value="Submit" onClick={e => this.handleClick(e)} />
             </form>
         )
     }
@@ -34,8 +34,9 @@ export default class NewReservationForm extends React.Component {
         })
     }
 
-    handleClick() {
-
+    handleClick = (event) => {
+        event.preventDefault()
+        this.props.onReservationSubmit(this.state)
     }
 
 }
